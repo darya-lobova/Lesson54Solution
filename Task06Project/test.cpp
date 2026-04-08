@@ -57,7 +57,7 @@ void test07() {
 
 void test08() {
 	int number = 0;
-	int expected = 0;
+	int expected = -1;
 	print(number, "test08", expected);
 }
 
