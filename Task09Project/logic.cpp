@@ -6,6 +6,18 @@
 
 #include "logic.h"
 
+int recursion(int number) {
+	//base case
+	if (number < 10) {
+		return number == 5 ? 5 : 0;
+	}
+
+	//recursion case
+	return recursion(number / 10) + (number % 10 == 5 ? 5 : 0);
+}
+
 int sum(int number) {
-	return 0;
+	number *= number < 0 ? -1 : 1;
+
+	return recursion(number);
 }
