@@ -7,6 +7,18 @@
 
 #include "logic.h"
 
+int recursion(int number) {
+	//base case
+	if (number < 10) {
+		return 1;
+	}
+
+	//recursion case
+	return 1 + recursion(number / 10);
+}
+
 int count(int number) {
-	return 0;
+	number *= number < 0 ? -1 : 1;
+
+	return recursion(number);
 }
