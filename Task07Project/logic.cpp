@@ -8,6 +8,18 @@
 
 #include "logic.h"
 
+int recursion(int number) {
+	//base case
+	if (number < 10) {
+		return number % 2;
+	}
+
+	//recursion case
+	return recursion(number / 10) + number % 10 % 2;
+}
+
 int count_of_odd_digits(int number) {
-	return 0;
+	number *= number < 0 ? -1 : 1;
+
+	return recursion(number);
 }
