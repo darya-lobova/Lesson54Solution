@@ -9,5 +9,15 @@
 #include "logic.h"
 
 int fibonacci(int index) {
-	return 0;
+	if (index <= 0) {
+		return index;
+	}
+
+	//base-case
+	if (index <= 2) {
+		return 1;
+	}
+
+	//recursion-case
+	return fibonacci(index - 1) + fibonacci(index - 2);
 }

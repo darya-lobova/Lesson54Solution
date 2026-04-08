@@ -6,6 +6,22 @@
 
 #include "logic.h"
 
+int recursion(int n, int m) {
+	//base case
+	if (n == m) {
+		return n;
+	}
+
+	//recursion case
+	return m + recursion(n, m - 1);
+}
+
+#include "logic.h"
+
 int sum(int n, int m) {
-	return 0;
+	if (n > m) {
+		return recursion(m, n);
+	}
+
+	return recursion(n,m);
 }
