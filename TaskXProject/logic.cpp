@@ -13,6 +13,17 @@
 
 #include "logic.h"
 
+int recursion(int index) {
+	//base case
+	if (index == 1) {
+		return 1;
+	}
+	//recursion case
+	return recursion(index - 1) + index;
+}
+
 int get_triangle_number(int index) {
-	return 0;
+	if (index <= 0) {
+		return index;
+	}
 }
