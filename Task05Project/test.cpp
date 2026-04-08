@@ -9,7 +9,7 @@ void print(int number, string name, int expected) {
 
 	cout << "\033[0m";
 
-	cout << "Count of number digits is " << actual << endl;
+	cout << "Count of digits of number " << number << " is " << actual << endl;
 	cout << "----------------------------------------------------" << endl;
 }
 
