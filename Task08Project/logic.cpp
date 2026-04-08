@@ -7,6 +7,18 @@
 
 #include "logic.h"
 
+int recursion(int index) {
+	//base case
+	if (index == 1) {
+		return 2;
+	}
+	return recursion(index - 1) * 2;
+}
+
 int get_number(int index) {
-	return 0;
+
+	if (index <= 0) {
+		return -1;
+	}
+	return recursion(index);
 }
