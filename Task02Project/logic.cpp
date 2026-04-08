@@ -8,11 +8,7 @@
 
 #include "logic.h"
 
-int fibonacci(int index) {
-	if (index <= 0) {
-		return index;
-	}
-
+int recursion(int index) {
 	//base-case
 	if (index <= 2) {
 		return 1;
@@ -20,4 +16,11 @@ int fibonacci(int index) {
 
 	//recursion-case
 	return fibonacci(index - 1) + fibonacci(index - 2);
+}
+
+int fibonacci(int index) {
+	if (index <= 0) {
+		return index;
+	}
+	return recursion(index);
 }
